@@ -4,7 +4,7 @@
 # upload packages you think you'll need
 library(dplyr)
 library(tidyr)
-library(ggplot2)
+#library(ggplot2)
 
 # load csv files from your working directory
 path <- "/Users/hazelkavili/Desktop/termProject"
