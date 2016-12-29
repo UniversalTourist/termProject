@@ -96,11 +96,11 @@ ortalamalar <- DataMaster %>% group_by(istasyon_no) %>%
 # make plots for each station
 ortalamalar <- as.matrix(ortalamalar[,-1])
 sehirler <- unique(DataMaster$sehir)
-par(mfrow=c(3,2))
-par(mar=c(5.1,5.1,4.1,2.1))
+par(mfrow=c(3,2)) # optional
+par(mar=c(5.1,5.1,4.1,2.1)) # optional
 
-for (k in seq(ortalamalar)) { 
-  plot(ortalamalar[k,], xlab = "Months", ylab = "Temperature", type = "l", col = k) 
+for (k in 1:nrow(ortalamalar)) { 
+  plot(ortalamalar[k,], xlab = "Aylar", ylab = "Ortalama Sicaklik", type = "b", col = k) 
   axis(1, at=1:12)
   title(main = paste0("Ortalama Sicaklik: ", sehirler[k]))  
   }
